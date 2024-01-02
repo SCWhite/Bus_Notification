@@ -7,16 +7,17 @@ Send a notification when bus arrives at 3 to 5 stops ahead target station.
 # To do
 
 - [x]  Bus API
-- [ ]  搞懂公車路線
+- [x]  搞懂公車路線
 - [x]  Cloud maching
-- [ ]  Event queue
+- [x]  Event queue
 - [ ]  Notification queue
-- [ ]  先做MVP
+- [x]  先做MVP
 ---
 - [ ]  Mock API
 - [ ]  Notification system
 - [ ]  Log and status report
 - [ ]  Multiple user
+- [ ]  Multithreading / Asyncio 
 - [ ]  Stress test
 - [ ]  Visualize
 - [ ]  Something extra(?)
@@ -57,6 +58,7 @@ Send a notification when bus arrives at 3 to 5 stops ahead target station.
 
 > 考慮到現實層面 70(人)*280(路線)*2(雙向)*3(重疊通知數)*20%(實際轉換率)  
 好像不適合這樣算 先放一邊處理重要的事
+重點在"並行" 使用者量由notification承擔
 
 處理邊界條件  
 如果輸入的站點是起始站? 沒有前3~5站的狀況怎麼辦
@@ -64,8 +66,14 @@ Send a notification when bus arrives at 3 to 5 stops ahead target station.
 > 目前先注重在符合條件的站點  
 我們還是可以用發車時間+平均到站時間來給出到站提醒
 
-> Event driven
-使用event queue / notification queue 來增加擴充性
+Event driven  
+> 使用event queue / notification queue 來增加擴充性
+
+我應該用Asyncio的  
+> 來不及了XD
+
+
+
 
 # Relative work
 TDX運輸資料流通服務  
