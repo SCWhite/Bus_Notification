@@ -15,6 +15,11 @@ Send a notification when bus arrives at 3 to 5 stops ahead target station.
 # default == 0 (TDX api) / set to 1 to use test api (fake bus running 20s/stop)
 $ python3 script.py --test 1 
 ```
+## Note:
+api_key & test host has been changed for publish  
+polling time is 30sec  
+Notification cool down is 300sec  
+
 # Configuration Files
 **route_table.ini**  
 Contain: *station_seqence*, *updatetime*, *versionid*  
