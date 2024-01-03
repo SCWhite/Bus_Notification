@@ -1,8 +1,49 @@
 # Bus_Notification
 demo project  
 
-## Goal
+Telegram bot: @Bus_Note_bot  
+<p align="center">
+<img src="https://github.com/SCWhite/Bus_Notification/edit/main/image/tg.png" width="350">
+</p>
+
+
+# Goal
 Send a notification when bus arrives at 3 to 5 stops ahead target station.
+
+# Usage
+```
+# default == 0 (TDX api) / set to 1 to use test api (fake bus running 20s/stop)
+$ python3 script.py --test 1 
+```
+# Configuration Files
+**route_table.ini**  
+Contain: *station_seqence*, *updatetime*, *versionid*  
+reduice unnecessary api call  
+```
+[672_0]
+stops = 38857,38863,191879,38865,38866,38867....
+updatetime = 2024-01-02T17:28:14+08:00
+versionid = 2955
+```
+
+**user.ini**  
+Contain: *user groups*  
+```
+[0004]
+user=Dell,Ella,Frank
+```
+
+**mission.ini**  
+Contain: *route_id*, *target_station*, *user groups*  
+```
+[672_1]
+target=38909
+user_group=0001
+```
+
+Add target direction & route in **mission.ini** for multiple route  
+Add user in **user.ini**  for multiple user    
+
 
 # To do
 
@@ -10,14 +51,14 @@ Send a notification when bus arrives at 3 to 5 stops ahead target station.
 - [x]  搞懂公車路線
 - [x]  Cloud maching
 - [x]  Event queue
-- [ ]  Notification queue
+- [x]  Notification queue
 - [x]  先做MVP
 ---
-- [ ]  Mock API
+- [x]  Mock API
 - [ ]  Notification system
 - [ ]  Log and status report
-- [ ]  Multiple user
-- [ ]  Multithreading / Asyncio 
+- [x]  Multiple user
+- [x]  Multithreading / Asyncio 
 - [ ]  Stress test
 - [ ]  Visualize
 - [ ]  Something extra(?)
@@ -34,7 +75,11 @@ Send a notification when bus arrives at 3 to 5 stops ahead target station.
 ```
 # Progress
 
-完成API剖析&local建表
+完成API剖析&local建表  
+Multithreading  
+去除重複  
+test api  
+~Telegrem bot~ 壞掉了  
 
 
 # Thought
