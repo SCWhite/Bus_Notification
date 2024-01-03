@@ -3,7 +3,7 @@ demo project
 
 Telegram bot: @Bus_Note_bot  
 <p align="center">
-<img src="https://github.com/SCWhite/Bus_Notification/edit/main/image/tg.png" width="350">
+<img src="https://github.com/SCWhite/Bus_Notification/blob/main/image/tg.png" width="450">
 </p>
 
 
